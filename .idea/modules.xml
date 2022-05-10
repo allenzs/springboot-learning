@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/sb_00_demo/sb_00_demo.iml" filepath="$PROJECT_DIR$/sb_00_demo/sb_00_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sb_01_mybatisplus/sb_01_mybatisplus.iml" filepath="$PROJECT_DIR$/sb_01_mybatisplus/sb_01_mybatisplus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sb_02_kafka/sb_02_kafka.iml" filepath="$PROJECT_DIR$/sb_02_kafka/sb_02_kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/springboot-learning.iml" filepath="$PROJECT_DIR$/.idea/springboot-learning.iml" />
+    </modules>
+  </component>
+</project>

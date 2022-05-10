@@ -1,0 +1,18 @@
+server:
+  port: 8888
+# 应用名称
+spring:
+  application:
+    name: spring-00-demo
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.0.107:3306/test
+    username: root
+    password: 123456
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
