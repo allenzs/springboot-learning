@@ -1,0 +1,48 @@
+server:
+  port: 9999
+  ipAddress: 127.0.0.1
+  timeout: 300
+  serverTimeOut: 3000
+  dataSize: 10MB
+
+# 应用名称
+spring:
+  profiles: online
+  application:
+    name: spring-00-demo
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.0.107:3306/test?useSSL=false
+    username: root
+    password: 123456
+
+  devtools:
+    restart:
+      exclude: static/**,public/**,config/application.yml
+      enabled: true
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+logging:
+  group:
+    group01: com.allen.sb_01_mybatisplus.service,com.allen.sb_01_mybatisplus.dao
+    group02: com.allen.sb_01_mybatisplus.controller
+  level:
+#    方式一：分组设置
+    group01: info
+    group02: warn
+#  方式二：分包设置
+    root: info
+    com.allen.sb_01_mybatisplus.controller: debug
+
+testcase:
+  book:
+    id: ${random.int}
+    name: ${random.value}
+    uuid: ${random.uuid}
+    publishTime: ${random.long}

@@ -2,6 +2,7 @@ package com.allen.sb_01_mybatisplus.service;
 
 import com.allen.sb_01_mybatisplus.Sb01MybatisplusApplication;
 import com.allen.sb_01_mybatisplus.bean.Book;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -48,9 +49,14 @@ class BookServiceTest {
 
     @Test
     public void getPage(){
-        List<Book> books = bookService.getPage(2, 4);
-        for (Book book : books) {
-            System.out.println(book);
+        Book book = new Book();
+        book.setId(1);
+        book.setName("allen");
+
+        IPage<Book> page = bookService.getPage(2, 4, book);
+        List<Book> records = page.getRecords();
+        for (Book record : records) {
+            System.out.println(record);
         }
     }
 }

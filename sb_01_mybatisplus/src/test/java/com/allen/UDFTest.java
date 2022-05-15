@@ -25,8 +25,8 @@ public class UDFTest {
 
     @Test
     public void insertTest(){
-        for (int i = 0; i < 10; i++) {
-            Book book = Book.of((i + 1), "click_" + i, "allen_" + i, "click_log_" + i);
+        for (int i = 0; i < 15; i++) {
+            Book book = Book.of((i + 10), "bigdata_" + i, "hadoop_" + i, "hadoop_" + i);
             bookDao.insert(book);
         }
     }

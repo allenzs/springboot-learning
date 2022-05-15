@@ -1,6 +1,7 @@
 package com.allen.sb_01_mybatisplus.service;
 
 import com.allen.sb_01_mybatisplus.bean.Book;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 
 import java.util.List;
 
@@ -20,5 +21,7 @@ public interface BookService {
 
     List<Book> getAll();
 
-    List<Book> getPage(Integer pageNum, Integer pageSize);
+    IPage<Book> getPage(Integer pageNum, Integer pageSize);
+
+    IPage<Book> getPage(Integer pageNum, Integer pageSize, Book book);
 }

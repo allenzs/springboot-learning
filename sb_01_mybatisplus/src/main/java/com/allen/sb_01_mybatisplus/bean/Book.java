@@ -2,10 +2,12 @@ package com.allen.sb_01_mybatisplus.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor(staticName = "of")
-public  class Book {
+@NoArgsConstructor
+public  class Book  {
     private Integer id;
     private String type;
     private String name;
